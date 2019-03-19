@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="" />
+    <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Cashbank.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cashbank.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/CustomExeption.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/CustomExeption.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/cashPaymentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/cashPaymentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/SendSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/SendSms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_13_102602_create_cashbanks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_13_102602_create_cashbanks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/img/houses.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/img/houses.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/dist/img/rentalhouses.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/img/rentalhouses.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +56,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Jobs/SendSms.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="1418">
+              <caret line="108" column="77" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/reports/table.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/finalReport.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-495" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="e#7#41#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,6 +127,9 @@
       <find>auto</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -104,7 +157,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/resources/views/backend/finalReport.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/cashBankPayments.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BillController.php" />
         <option value="$PROJECT_DIR$/app/Repositories/PropertyunitservicebillRepository.php" />
         <option value="$PROJECT_DIR$/app/Models/Propertyunitservicebill.php" />
@@ -126,11 +178,12 @@
         <option value="$PROJECT_DIR$/resources/views/backend/error.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/cashPaymentsController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/complaint.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/validation.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PropertyunitservicebillController.php" />
         <option value="$PROJECT_DIR$/app/Jobs/SendSms.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" />
+        <option value="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" />
       </list>
     </option>
   </component>
@@ -254,12 +307,12 @@
     <option name="width" value="1221" />
     <option name="height" value="401" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,7 +335,14 @@
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
               <item name="rental" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Jobs" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rental" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
@@ -334,12 +394,25 @@
             <path>
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
               <item name="rental" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tenantaccounts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rental" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rental" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -470,11 +543,13 @@
       <workItem from="1551632820727" duration="1948000" />
       <workItem from="1551640930634" duration="2086000" />
       <workItem from="1552228692808" duration="3430000" />
+      <workItem from="1552552254474" duration="3433000" />
+      <workItem from="1552923064690" duration="1426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="657213000" />
+    <option name="totallyTimeSpent" value="662072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -488,7 +563,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.3242424" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.3348485" />
       <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.4212121" />
       <window_info id="Favorites" order="2" sideWeight="0.5016234" side_tool="true" weight="0.40075758" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -501,7 +576,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" weight="0.32954547" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49848485" weight="0.7386364" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49848485" visible="true" weight="0.7394137" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.6314935" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32954547" />
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32954547" />
@@ -515,33 +590,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_08_180622_create_propertyspects_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_08_162110_create_tenantaccounts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_08_161950_create_bills_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_07_090545_create_propertyunitservicebills_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_06_121505_create_propertyunits_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_06_121338_create_servicebills_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -563,16 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="152" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/fields.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -679,16 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="117" column="50" selection-start-line="117" selection-start-column="50" selection-end-line="117" selection-end-column="50" />
-          <folding>
-            <element signature="e#7#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontendPartial/_nav.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -717,13 +745,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/billpayment.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="108" column="74" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="74" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/validation.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -759,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/complaintController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ComposemessageController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -792,10 +806,67 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-14.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="152" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/complaintController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Complaint.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Jobs/SendSms.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="-488">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1418">
+          <caret line="108" column="77" selection-start-line="108" selection-start-column="77" selection-end-line="108" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/reports/table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/finalReport.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
         </state>
       </provider>
     </entry>

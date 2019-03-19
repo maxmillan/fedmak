@@ -28,7 +28,7 @@ class complaintController extends Controller
 
         $complaints->save();
 
-        SendSms::dispatch($request->message, $request->user['name'],'0790268795');
+        SendSms::dispatch($request->message ,'0790268795');
 
 //        $complaint = Complaint::get($request->complaint_id);
 //        $user = User::all();
