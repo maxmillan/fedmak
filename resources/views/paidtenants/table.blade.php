@@ -9,6 +9,7 @@
             <th>House Type</th>
             <th>Status</th>
             <th>Amount</th>
+            <th>Balance</th>
             <th>Date</th>
             <th colspan="3">Action</th>
         </tr>
@@ -22,6 +23,12 @@
                 <td>{!! $paidtenant->lease->propertyunit->housetype !!}</td>
                 <td>{!! $paidtenant->transaction_type !!}</td>
                 <td>{!! $paidtenant->amount !!}</td>
+                @if($paidtenant->balance==0)
+                    <td><b>NO BALANCE</b></td>
+                    @else
+                    <td>{!! $paidtenant->balance !!}</td>
+
+                @endif
                 <td>{!! $paidtenant->created_at->format('d/m/Y') !!}</td>
                 <td>
                     {!! Form::open(['route' => ['paidtenants.destroy', $paidtenant->id], 'method' => 'delete']) !!}

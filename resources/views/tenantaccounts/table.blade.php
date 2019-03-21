@@ -7,7 +7,7 @@
         <th>House No</th>
         <th>House Type</th>
         <th>Bill</th>
-        <th>Balance</th>
+        <th>Amount</th>
         <th>Status</th>
         <th>Date</th>
             <th colspan="3">Action</th>

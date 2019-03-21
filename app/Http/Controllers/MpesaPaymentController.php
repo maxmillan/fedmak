@@ -46,21 +46,23 @@ class MpesaPaymentController extends Controller
 //            $leases = Lease::all();
 //            $units = Propertyunit::all();
 
-            $findUnits = Propertyunit::where('house','=',$payment->BillRefNumber)->get();
+
+        $findUnits = Propertyunit::where('house','=',$payment->BillRefNumber)->get();
             foreach ($findUnits as $findUnit)
             $findLeases = Lease::where('propertyunit_id','=',$findUnit->id)->get();
             foreach ($findLeases as $findLease)
 
-            $tenants = Paidtenant::create([
-                'user_id'=>$findLease->user->id,
-                'lease_id'=>$findLease->id,
-                'payment_id'=>$payment->id,
-                'property_id'=>$findLease->propertyunit->property->id,
-                'transaction_type'=>debit,
-                'amount'=>$payment->TransAmount,
-                'house'=>$payment->BillRefNumber,
+                $tenants = Paidtenant::create([
+                    'user_id'=>$findLease->user->id,
+                    'lease_id'=>$findLease->id,
+                    'payment_id'=>$payment->id,
+                    'property_id'=>$findLease->propertyunit->property->id,
+                    'transaction_type'=>debit,
+                    'amount'=>$payment->TransAmount,
+                    'house'=>$payment->BillRefNumber,
 //                'bill'=>$bill->servicebill->name
-            ]);
+                ]);
+
         $finalReports = Finalreport::create([
             'lease_id'=>$findLease->id,
             'user_id'=>$findLease->user->id,
@@ -69,7 +71,7 @@ class MpesaPaymentController extends Controller
             'transaction_type'=>'debit'
         ]);
 
-
+        $total = 0;
            $balances = Tenantaccount::where('lease_id','=',$findLease->id)->get();
            $balans = Paidtenant::where('lease_id','=',$findLease->id)->get();
            foreach ($balances as $balance)
@@ -81,9 +83,10 @@ class MpesaPaymentController extends Controller
 
         /** @noinspection PhpUndefinedVariableInspection */
         $totalBalance = ($total - $totalTwo);
+        DB::table('paidtenants')->where('lease_id',"=", $tenants->lease_id)->update(['balance'=>($totalBalance)]);
 
 //            endforeach
-        DB::table('tenantaccounts')->where('lease_id','=',$tenants->lease_id)->Where('amount','=',$tenants->amount)->delete();
+        DB::table('tenantaccounts')->where('lease_id','=',$tenants->lease_id)->Where('amount','<=',$tenants->amount)->delete();
 
 
         DB::table('tenantaccounts')->where('lease_id','=', $tenants->lease_id)->Where('amount','>',$tenants->amount)->update(['amount'=>($totalBalance)]);
@@ -128,7 +131,7 @@ class MpesaPaymentController extends Controller
 
     public function simulate(){
         $mpesa= new Mpesa();
-        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 1800, 254708374149, 'A2' );
+        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 4000, 254708374149, 'A1' );
         var_dump($c2bTransaction);
     }
 }

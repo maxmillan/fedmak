@@ -68,11 +68,10 @@ class cashPaymentsController extends Controller
         $store->amount = $request->amount;
         $store->property_id = $request->property_id;
         $store->transaction_type = 'debit';
-
-
-
-
         $store->save();
+
+        $total = 0;
+
         $findBalaces = Tenantaccount::where('lease_id',$payments->lease->id)->get();
         $findPaids = Paidtenant::where('lease_id',$payments->lease->id)->get();
         foreach ($findBalaces as $findBalace)
@@ -81,6 +80,8 @@ class cashPaymentsController extends Controller
             $totalTwo = $findPaid->amount;
 
         $totalBalance = $total - $totalTwo;
+        DB::table('paidtenants')->where('lease_id',"=", $payments->lease_id)->update(['balance'=>($totalBalance)]);
+
 
         DB::table('tenantaccounts')->where('lease_id','=',$payments->lease_id)->Where('amount','<=',$payments->amount)->delete();
         DB::table('tenantaccounts')->where('lease_id','=', $payments->lease_id)->Where('amount','>',$payments->amount)->update(['amount'=>($totalBalance)]);
