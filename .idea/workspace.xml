@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/testing.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/vacantHouses.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyunitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyunitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Lease.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lease.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Propertyunit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Propertyunit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_06_121505_create_propertyunits_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_06_121505_create_propertyunits_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/paymentsAndBilling.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/paymentsAndBilling.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/leases/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/leases/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/properties/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/properties/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/propertyunits/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propertyunits/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,15 +42,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/properties/table.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/vacantHouses.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
@@ -108,12 +77,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/paymentsAndBilling.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
               <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="311" column="5" selection-start-line="311" selection-start-column="5" selection-end-line="311" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/paymentrecords.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/cashPaymentsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-405" />
           </provider>
         </entry>
       </file>
@@ -127,31 +121,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="95" column="70" selection-start-line="95" selection-start-column="70" selection-end-line="95" selection-end-column="70" />
-              <folding>
-                <element signature="e#7#41#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/users/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
               <caret line="41" column="27" selection-start-line="41" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PropertyunitController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="65" column="83" selection-start-line="65" selection-start-column="83" selection-end-line="65" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -189,8 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_19_202527_add_leas_to_propertyunitservicebills.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_08_162110_create_tenantaccounts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_08_161950_create_bills_table.php" />
         <option value="$PROJECT_DIR$/resources/views/propertyunitservicebills/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/leaseError.blade.php" />
@@ -240,6 +211,8 @@
         <option value="$PROJECT_DIR$/resources/views/propertyunits/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/paymentsAndBilling.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/paymentrecords.blade.php" />
       </list>
     </option>
   </component>
@@ -470,21 +443,7 @@
               <item name="rental" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backendPartial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="bills" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
@@ -684,12 +643,12 @@
       <workItem from="1553153794701" duration="4923000" />
       <workItem from="1553228189119" duration="4780000" />
       <workItem from="1553320714754" duration="24701000" />
-      <workItem from="1553457796122" duration="10359000" />
+      <workItem from="1553457796122" duration="11400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="723972000" />
+    <option name="totallyTimeSpent" value="725013000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -731,17 +690,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_23_064047_add_lease_id_to_propertyunitservicebills.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/leaseHelpController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/propertyunitservicebills/fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ServicebillController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810" />
@@ -1052,6 +1000,25 @@
         <state relative-caret-position="532">
           <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="311" column="5" selection-start-line="311" selection-start-column="5" selection-end-line="311" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/paymentrecords.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/cashPaymentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
       </provider>
     </entry>
   </component>
