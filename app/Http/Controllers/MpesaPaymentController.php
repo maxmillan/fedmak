@@ -108,8 +108,8 @@ class MpesaPaymentController extends Controller
 
         $curl_post_data = array(
             //Fill in the request parameters with valid values
-            'ValidationURL' => 'http://fedmakpropertymanagers.co.ke/getMpesaValidation',
-            'ConfirmationURL' => 'http://fedmakpropertymanagers.co.ke/getMpesaPayment',
+            'ValidationURL' => 'https://fedmakpropertymanagers.co.ke/getMpesaValidation',
+            'ConfirmationURL' => 'https://fedmakpropertymanagers.co.ke/getMpesaPayment',
             'ResponseType' => 'completed',
             'ShortCode' => '601426',
         );
