@@ -30,6 +30,7 @@ class Propertyunit extends Model
     public $fillable = [
         'house',
         'housetype',
+        'status',
         'property_id'
     ];
 
@@ -41,6 +42,7 @@ class Propertyunit extends Model
     protected $casts = [
         'id' => 'integer',
         'house' => 'string',
+        'status' => 'string',
         'housetype' => 'string',
         'property_id' => 'integer'
     ];

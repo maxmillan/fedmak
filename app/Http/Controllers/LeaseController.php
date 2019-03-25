@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateLeaseRequest;
 use App\Http\Requests\UpdateLeaseRequest;
+use App\Models\Lease;
 use App\Models\Propertyunit;
 use App\Repositories\LeaseRepository;
 use App\Http\Controllers\AppBaseController;
 use App\User;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -80,8 +82,10 @@ class LeaseController extends AppBaseController
         $input = $request->all();
 
         $lease = $this->leaseRepository->create($input);
+        $findHouseNos = Propertyunit::find($input['propertyunit_id']);
+     DB::table('propertyunits')->where('house',$findHouseNos->house)->update(['status'=>booked]);
 
-        Flash::success('Lease saved successfully.');
+        Flash::success('Tenant Details saved successfully.');
 
         return redirect(route('leases.index'));
     }
@@ -115,6 +119,8 @@ class LeaseController extends AppBaseController
      */
     public function edit($id)
     {
+        $users=\App\Models\User::all();
+        $houseNumbers = Propertyunit::all();
         $lease = $this->leaseRepository->findWithoutFail($id);
 
         if (empty($lease)) {
@@ -123,7 +129,10 @@ class LeaseController extends AppBaseController
             return redirect(route('leases.index'));
         }
 
-        return view('leases.edit')->with('lease', $lease);
+        return view('leases.edit',[
+            'users'=>$users,
+            'houseNumbers'=>$houseNumbers,
+        ])->with('lease', $lease);
     }
 
     /**
@@ -167,7 +176,8 @@ class LeaseController extends AppBaseController
 
             return redirect(route('leases.index'));
         }
-
+        $findLeases = Lease::find($id);
+        DB::table('propertyunits')->where('house',$findLeases->propertyunit->house)->update(['status'=>null]);
         $this->leaseRepository->delete($id);
 
         Flash::success('Lease deleted successfully.');

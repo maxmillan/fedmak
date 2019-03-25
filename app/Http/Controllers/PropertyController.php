@@ -33,9 +33,9 @@ class PropertyController extends AppBaseController
     {
         $this->propertyRepository->pushCriteria(new RequestCriteria($request));
         $properties = $this->propertyRepository->all();
-
-        return view('properties.index')
-            ->with('properties', $properties);
+            return view('properties.index',[
+            'properties'=>$properties,
+        ]);
     }
 //    public function countHouses(){
 //        $properties = Propertyunit::count();

@@ -81,6 +81,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::resource('complaints', 'backComplaintController');
     Route::resource('generalReport', 'finalReportController');
     Route::resource('cashBank', 'cashPaymentsController');
+    Route::resource('testing', 'billTenantTestingController');
     Route::get('cashBanks', 'cashPaymentsController@balance');
     Route::get('TenantReport/{id}', 'finalReportController@eachTenantReport');
     Route::get('leaseHelp', 'leaseHelpController@index');
@@ -92,6 +93,7 @@ Route::middleware('auth:admin')->group(function () {
 
 
         Route::view('registerSuccess', 'backend.registerSuccess');
+        Route::get('vacant/{id}', 'PropertyunitController@vacantHouses');
 
         Route::get('tenants', function (){
             $user =Auth::user();

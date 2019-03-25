@@ -16,10 +16,11 @@ class CreatePropertyunitsTable extends Migration
         Schema::create('propertyunits', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('house')->unique();
-            $table->string('housetype');
+            $table->string('house')->unique()->nullable();
+            $table->string('housetype')->nullable();
+            $table->string('status')->nullable();
 
-            $table->integer('property_id')->unsigned();
+            $table->integer('property_id')->unsigned()->nullable();
             $table->foreign('property_id')->references('id')->on('properties');
 
 

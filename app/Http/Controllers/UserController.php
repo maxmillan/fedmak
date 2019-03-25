@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\Lease;
+use App\Models\Paidtenant;
 use App\Models\User;
 use App\Propertyunit;
 use App\Repositories\UserRepository;
@@ -157,6 +158,7 @@ class UserController extends AppBaseController
         if (!empty($exist->id)){
             return view('backend.userError');
         }
+        $paidDetails = Paidtenant::where('user_id',$id)->delete();
 
         $this->userRepository->delete($id);
 

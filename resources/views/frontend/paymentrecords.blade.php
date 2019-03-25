@@ -64,12 +64,14 @@
         </div>
 
 
-                    <style>
-                    .container-fluid{
-                        background-color:#e4e4e4;
 
-                    }
-
-                </style>
 
 @endsection
+<style>
+    .container-fluid{
+        background-color:#e4e4e4;
+
+    }
+
+
+</style>

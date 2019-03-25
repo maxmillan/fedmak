@@ -334,10 +334,11 @@
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-
-
-
-
-
-
 @endsection
+<style>
+    body,html{
+        height: 100%;
+        background-image:url({{asset('dist/img/houses.jpeg')}});
+        font-family: 'Lato', sans-serif;
+    }
+</style>

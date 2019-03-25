@@ -95,3 +95,10 @@
     </div>
 
 @endsection
+<style>
+    body,html{
+        height: 100%;
+        background-image:url({{asset('dist/img/houses.jpeg')}});
+        font-family: 'Lato', sans-serif;
+    }
+</style>

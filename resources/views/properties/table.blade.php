@@ -8,6 +8,7 @@
         <th>Location</th>
         <th>Houses</th>
         <th>Landlord</th>
+        <th>Vacant Houses</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -19,6 +20,8 @@
             <td>{!! $property->location !!}</td>
             <td>{{\App\Propertyunit::where('property_id',$property->id)->count()}} </td>
             <td>{!! $property->landlord !!}</td>
+            <td><a href="{{ url('admin/vacant/'.$property->id)}}" class="btn btn-primary" >{{\App\Models\Propertyunit::where('property_id',$property->id)->where('status',null)->count()}}
+                </a></td>
             <td>
                 {!! Form::open(['route' => ['properties.destroy', $property->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

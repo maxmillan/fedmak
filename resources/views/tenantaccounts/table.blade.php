@@ -20,7 +20,7 @@
             <td>{!! $tenantaccount->lease->propertyunit->property->name !!}</td>
             <td>{!! $tenantaccount->lease->propertyunit->house !!}</td>
             <td>{!! $tenantaccount->lease->propertyunit->housetype !!}</td>
-            <td>{!! $tenantaccount->bill->servicebill->name !!}</td>
+            <td>{!! $tenantaccount->bill->servicebill->name!!}</td>
             <td>{!! $tenantaccount->amount!!}</td>
             <td>{!! $tenantaccount->transaction_type!!}</td>
             <td>{!! $tenantaccount->created_at->format('d/m/Y')!!}</td>

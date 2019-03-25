@@ -62,6 +62,13 @@ class PropertyunitController extends AppBaseController
         ])
             ->with('propertyunits', $propertyunits);
     }
+    public function vacantHouses($id){
+        $vacantHouses = Propertyunit::where('property_id',$id)->where('status',null)->get();
+
+        return view('backend.vacantHouses',[
+            'vacantHouses'=>$vacantHouses
+        ]);
+    }
 
     /**
      * Store a newly created Propertyunit in storage.

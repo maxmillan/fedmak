@@ -8,3 +8,4 @@
 
 const debit = 'PAID';
 const credit = 'NOT PAID';
+const booked = 'NOT VACANT';

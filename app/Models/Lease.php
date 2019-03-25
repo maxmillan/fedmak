@@ -90,4 +90,9 @@ class Lease extends Model
     {
         return $this->belongsTo(\App\Models\Mpesapayment::class);
     }
+
+    public function propertyUnitServiceBill()
+    {
+        return $this->belongsTo(\App\Models\Propertyunitservicebill::class);
+    }
 }
