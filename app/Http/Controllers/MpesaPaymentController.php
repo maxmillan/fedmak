@@ -108,8 +108,8 @@ class MpesaPaymentController extends Controller
 
         $curl_post_data = array(
             //Fill in the request parameters with valid values
-            'ValidationURL' => 'https://c71561f7.ngrok.io/rental/public/getMpesaValidation',
-            'ConfirmationURL' => 'https://c71561f7.ngrok.io/rental/public/getMpesaPayment',
+            'ValidationURL' => 'https://fedmakpropertymanagers/getMpesaValidation',
+            'ConfirmationURL' => 'https://fedmakpropertymanagers/getMpesaPayment',
             'ResponseType' => 'completed',
             'ShortCode' => '601426',
         );

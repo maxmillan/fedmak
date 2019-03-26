@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rental.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rental.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaidtenantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaidtenantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/BillingTenantsMonthly.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/finalReport.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/finalReport.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,17 +64,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/finalReportController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="278">
               <caret line="51" column="107" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/finalreports">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="104" column="46" lean-forward="true" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -186,7 +175,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/paymentrecords.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" />
         <option value="$PROJECT_DIR$/app/Jobs/CreateMonthlyBills.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
@@ -195,6 +183,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/finalReport.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" />
       </list>
     </option>
   </component>
@@ -616,12 +605,12 @@
       <workItem from="1553527158410" duration="874000" />
       <workItem from="1553530986502" duration="2012000" />
       <workItem from="1553536022999" duration="5813000" />
-      <workItem from="1553600602307" duration="3795000" />
+      <workItem from="1553600602307" duration="5610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="740674000" />
+    <option name="totallyTimeSpent" value="742489000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,8 +623,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.23712121" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.23712121" />
       <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.4212121" />
       <window_info id="Favorites" order="2" sideWeight="0.5016234" side_tool="true" weight="0.40075758" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -648,7 +638,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" weight="0.32954547" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49772727" visible="true" weight="0.6009772" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49772727" weight="0.6009772" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5022727" side_tool="true" weight="0.73615634" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32899022" />
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32954547" />
@@ -933,13 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="71" column="11" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="71" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Jobs/CreateMonthlyBills.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1014,17 +997,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/finalReportController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="51" column="107" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/finalreports">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/finalReportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="51" column="107" selection-start-line="51" selection-start-column="107" selection-end-line="51" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="104" column="46" lean-forward="true" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
         </state>
       </provider>
     </entry>
