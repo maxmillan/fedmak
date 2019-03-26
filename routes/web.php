@@ -90,6 +90,7 @@ Route::middleware('auth:admin')->group(function () {
 
 
         Route::any('getPaidFilter/{id}','PaidtenantController@getPaidTenants');
+        Route::any('getReportFilter/{id}','finalReportController@getPropertyReportDetails');
 
 
         Route::view('registerSuccess', 'backend.registerSuccess');
@@ -113,6 +114,7 @@ Route::middleware('auth:admin')->group(function () {
         Route::get('paidTenants/{id}','PaidtenantController@paidTenants');
         Route::get('unpaidTenants/{id}','TenantaccountController@unpaidTenants');
         Route::get('propertReport/{id}','finalReportController@eachPropertyReport');
+        Route::get('propertReportDetails/{id}','finalReportController@getPropertyReportDetails');
         Route::get('lDetails/{id}','cashPaymentsController@leaseDetails');
         Route::view('error','backend.error');
         Route::view('billError','backend.billingError');

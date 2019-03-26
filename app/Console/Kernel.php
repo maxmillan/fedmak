@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Jobs\CreateMonthlyBills;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -24,8 +25,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('command:DeletePayments')
-                  ->everyFiveMinutes();
+//         $schedule->command('command:DeletePayments')
+//                  ->everyMinute();
+
+         $schedule->job(new CreateMonthlyBills())->monthly();
     }
 
     /**

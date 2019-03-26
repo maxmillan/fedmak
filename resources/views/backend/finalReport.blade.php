@@ -22,6 +22,35 @@
         </div>
         
         @endif
+
+        <div class="box">
+            <div class="box-body">
+                <form method="post" action="{{ url('admin/getReportFilter/'.$property_id) }}">
+                    {{ csrf_field() }}
+                    <div class="col-md-12">
+                        <div class="col-md-3 col-md-offset-2">
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <input type="date" name="from" value="{{ \Carbon\Carbon::today()->firstOfMonth()->toDateString() }}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input type="date" name="to" value="{{ \Carbon\Carbon::today()->endOfMonth()->toDateString() }}" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-sm btn-success" value="Search" style="margin-top: 28px">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
         <h2>PAYMENT REPORT </h2>
 
         <div class="clearfix"></div>
@@ -54,7 +83,7 @@
                                     {{--<td>Rent</td>--}}
                                     <th style="text-align: right;">{{ number_format(($finalReport->transaction_type == 'credit')? $finalReport->amount : 0,2) }}</th>
                                     <th style="text-align: right;">{{ number_format(($finalReport->transaction_type == 'debit')? $finalReport->amount : 0,2) }}</th>
-                                    <td style="text-align: right;">{{$finalReport->created_at->format('d/m/Y')}}</td>
+                                    <td style="text-align: right;">{{$finalReport->created_at->format('m/d/Y')}}</td>
                                     {{--@foreach($finals as $final)--}}
                                     {{--<td>{{$final->amount}}</td>--}}
                                     {{--@endforeach--}}

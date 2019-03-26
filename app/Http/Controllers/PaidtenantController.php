@@ -79,7 +79,7 @@ class PaidtenantController extends AppBaseController
     public function getPaidTenants(Request $request, $id){
         if(!$request->isMethod('POST')){
             return redirect('admin/paidTenants/'.$id);
-        }
+        };
 
         $from = Carbon::parse($request->from)->startOfDay();
         $to = Carbon::parse($request->to)->endOfDay();
