@@ -50,16 +50,14 @@ class PropertyunitservicebillController extends AppBaseController
     {
         $propertyunitservicebills = Servicebill::all();
         $props =Propertyunit::where('id',$id)->get();
-        $leas = Lease::where('propertyunit_id',$id)->get();
-        foreach ($leas as $lea)
+//        $leas = Lease::where('propertyunit_id',$id)->get();
+//        foreach ($leas as $lea)
         return view('propertyunitservicebills.create',[
             'propertyunit_id'=>$id,
             'props'=>$props,
-            'lea'=>$lea
+//            'lea'=>$lea
         ])->with('propertyunitservicebills', $propertyunitservicebills);
-        if ($leas){
-            return view('backend.leaseError');
-        }
+
 
 
     }

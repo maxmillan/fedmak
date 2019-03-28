@@ -46,7 +46,7 @@ class Propertyunitservicebill extends Model
     protected $casts = [
         'id' => 'integer',
         'interval' => 'string',
-        'amount' => 'string',
+        'amount' => 'integer',
         'servicebill_id' => 'integer',
         'propertyunit_id' => 'integer',
         'leas' => 'integer'

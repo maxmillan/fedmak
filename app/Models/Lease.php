@@ -95,4 +95,8 @@ class Lease extends Model
     {
         return $this->belongsTo(\App\Models\Propertyunitservicebill::class);
     }
+    public function finalReport(){
+        return $this->belongsTo(\App\Finalreport::class);
+
+    }
 }

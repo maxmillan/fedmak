@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateLeaseRequest;
 use App\Http\Requests\UpdateLeaseRequest;
+use App\Models\Bill;
 use App\Models\Lease;
 use App\Models\Propertyunit;
+use App\Models\Propertyunitservicebill;
+use App\Models\Tenantaccount;
 use App\Repositories\LeaseRepository;
 use App\Http\Controllers\AppBaseController;
 use App\User;
@@ -83,7 +86,36 @@ class LeaseController extends AppBaseController
 
         $lease = $this->leaseRepository->create($input);
         $findHouseNos = Propertyunit::find($input['propertyunit_id']);
-     DB::table('propertyunits')->where('house',$findHouseNos->house)->update(['status'=>booked]);
+        DB::table('propertyunits')->where('house',$findHouseNos->house)->update(['status'=>booked]);
+        $findLeases = Lease::where('propertyunit_id',$input['propertyunit_id'])->get();
+            foreach ($findLeases as $findLease)
+        $propertyUnitBills = Propertyunitservicebill::where('propertyunit_id',$input['propertyunit_id'])->get();
+            foreach ($propertyUnitBills as $propertyUnitBill)
+                $propertyUnits = Propertyunitservicebill::where('propertyunit_id',$input['propertyunit_id'])->sum('amount');
+                //insert bill to bills table
+                $monthlyBill = Bill::create([
+                    'amount' =>$propertyUnits,
+                    'propertyunit_id' =>$findLease->propertyunit->id,
+                    'servicebill_id' =>$propertyUnitBill->servicebill_id
+                ]);
+                $bills = Bill::where('propertyunit_id',$findLease->propertyunit->id)->get();
+                foreach ($bills as $bill){
+                    $tenantAccount = Tenantaccount::create([
+                        'user_id' => $findLease->user_id,
+                        'lease_id' => $findLease->id,
+                        'bill_id' => $bill->id,
+                        'property_id' => $findLease->propertyunit->property->id,
+                        'transaction_type' => credit,
+                        'amount' => $propertyUnits,
+                        'house' => $findLease->propertyunit->house,
+
+                    ]);
+                }
+
+
+
+
+
 
         Flash::success('Tenant Details saved successfully.');
 

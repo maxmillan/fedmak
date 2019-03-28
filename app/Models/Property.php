@@ -67,4 +67,12 @@ class Property extends Model
     {
         return $this->hasMany(\App\Models\Propertyunit::class);
     }
+    public function leases()
+    {
+        return $this->hasMany(\App\Models\Lease::class);
+    }
+    public function finalReport()
+    {
+        return $this->belongsTo(\App\Finalreport::class);
+    }
 }

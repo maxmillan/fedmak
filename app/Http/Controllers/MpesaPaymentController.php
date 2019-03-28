@@ -108,8 +108,8 @@ class MpesaPaymentController extends Controller
 
         $curl_post_data = array(
             //Fill in the request parameters with valid values
-            'ValidationURL' => 'https://fedmakpropertymanagers/getMpesaValidation',
-            'ConfirmationURL' => 'https://fedmakpropertymanagers/getMpesaPayment',
+            'ValidationURL' => 'https://55f83190.ngrok.io/rental/public/getMpesaValidation',
+            'ConfirmationURL' => 'https://55f83190.ngrok.io/rental/public/getMpesaPayment',
             'ResponseType' => 'completed',
             'ShortCode' => '601426',
         );
@@ -131,7 +131,7 @@ class MpesaPaymentController extends Controller
 
     public function simulate(){
         $mpesa= new Mpesa();
-        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 4000, 254708374149, 'A1' );
+        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 12000, 254708374149, 'A1' );
         var_dump($c2bTransaction);
     }
 }

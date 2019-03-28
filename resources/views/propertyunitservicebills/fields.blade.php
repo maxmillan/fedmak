@@ -27,7 +27,7 @@
 {{--<div class="form-group col-sm-6">--}}
 {{--    {!! Form::label('propertyunit_id', 'Propertyunit Id:') !!}--}}
     {!! Form::hidden('propertyunit_id', $propertyunit_id, ['class' => 'form-control']) !!}
-    {!! Form::hidden('leas', $lea->id, ['class' => 'form-control']) !!}
+{{--    {!! Form::hidden('leas', $lea->id, ['class' => 'form-control']) !!}--}}
 {{--</div>--}}
 
 <!-- Submit Field -->

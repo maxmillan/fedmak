@@ -7,7 +7,7 @@
             <option value='{{$lease->id}}'>{{$lease->propertyunit->house}}</option>
         @endforeach
     </select>
-    <input type="hidden" id="lease" name="lease_id">
+    <input type="hidden" id="propertyunit" name="propertyunit_id">
 </div>
 
 <!-- Servicebill Id Field -->
@@ -43,7 +43,7 @@
                     $('#servicebill').val(data.servicebill['name']);
                     $('#service').val(data.servicebill['id']);
                     $('#amount').val(data.amount);
-                    $('#lease').val(data.leas);
+                    $('#propertyunit').val(data.propertyunit_id);
                         // $('#property_name').val(data.propertyunit.property['name']);
                     // $('#property').val(data.propertyunit.property['id']);
                 }

@@ -72,7 +72,7 @@
                                 <th style="text-align: right;">Date</th>
                                 {{--<th>Area (Km²)</th>--}}
                             </tr>
-                            </thead>
+                            </thead>tenantaccounts
                             <tbody>
                             @foreach($finalReports as $finalReport)
                                 <tr>

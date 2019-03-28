@@ -17,7 +17,6 @@ class CreatePropertyunitservicebillsTable extends Migration
             $table->increments('id');
             $table->string('interval');
             $table->integer('amount');
-            $table->integer('leas');
 
             $table->integer('servicebill_id')->unsigned();
             $table->foreign('servicebill_id')->references('id')->on('servicebills');

@@ -38,8 +38,11 @@ class BillController extends AppBaseController
     {
         $this->billRepository->pushCriteria(new RequestCriteria($request));
         $bills = $this->billRepository->all();
-
-        return view('bills.index')
+        foreach ($bills as $bill)
+            $tenantDetails = Lease::where('propertyunit_id',$bill->propertyunit_id)->get();
+        return view('bills.index',[
+            'tenantDetails'=>$tenantDetails
+        ])
             ->with('bills', $bills);
     }
 
@@ -94,12 +97,14 @@ class BillController extends AppBaseController
 //        print_r($input);die;
 
         DB::transaction(function()use ($input){
-            $lease = Lease::find($input['lease_id']);
-            //insert bill to bills table
-            $bill = $this->billRepository->create($input);
+
+                //insert bill to bills table
+                $bill = $this->billRepository->create($input);
 //            if (!($lease==null)){
+            $leases = Lease::where('propertyunit_id',$input['propertyunit_id'])->get();
+            foreach ($leases as $lease){
                 $totalBillableAmount = $bill->amount;
-                $paidAmounts = Paidtenant::where('lease_id',$input['lease_id'])->get();
+                $paidAmounts = Paidtenant::where('lease_id',$lease->id)->get();
                 if(count($paidAmounts)){
                     foreach ($paidAmounts as $paidAmount){
                         $balance = ($bill->amount);
@@ -108,37 +113,46 @@ class BillController extends AppBaseController
                         $totalBillableAmount = ($balance1+$balance);
                     }
 
-            }
-            $tenants = Tenantaccount::where('lease_id',$input['lease_id'])->get();
-            if (count($tenants)){
-                DB::table('tenantaccounts')->where('lease_id',$input['lease_id'])->update(['amount'=>($totalBillableAmount)]);
+                }
+                $tenants = Tenantaccount::where('lease_id',$lease->id)->get();
+                if (count($tenants)){
+//                    foreach ($tenants as $tenant){
+//                        $total =($tenant->amount);
+//                        $total1 = ($total+$totalBillableAmount);
+//
+//                    }
 
-            }
-            else{
-                //insert bill to tenants account table
-                $tenantAccount = Tenantaccount::create([
-                    'user_id' => $lease->user_id,
-                    'lease_id' => $input['lease_id'],
-                    'bill_id' => $bill->id,
-                    'property_id' => $lease->propertyunit->property->id,
-                    'transaction_type' => credit,
-                    'amount' => $totalBillableAmount,
-                    'house' => $lease->propertyunit->house,
+                    DB::table('tenantaccounts')->where('lease_id',$lease->id)->update(['amount'=>($totalBillableAmount)]);
 
+
+                }
+                else{
+                    //insert bill to tenants account table
+                    $tenantAccount = Tenantaccount::create([
+                        'user_id' => $lease->user_id,
+                        'lease_id' => $lease->id,
+                        'bill_id' => $bill->id,
+                        'property_id' => $lease->propertyunit->property->id,
+                        'transaction_type' => credit,
+                        'amount' => $totalBillableAmount,
+                        'house' => $lease->propertyunit->house,
+
+                    ]);
+                }
+
+                DB::table('paidtenants')->where('lease_id',$lease->id)->update(['balance'=>($totalBillableAmount)]);
+                DB::table('tenantaccounts')->where('amount','<=',0)->delete();
+
+
+                $finalReports = Finalreport::create([
+                    'lease_id'=>$lease->id,
+                    'user_id'=>$lease->user->id,
+                    'property_id'=>$lease->propertyunit->property->id,
+                    'amount'=>$bill->amount,
+                    'transaction_type'=>'credit'
                 ]);
             }
 
-            DB::table('paidtenants')->where('lease_id',$input['lease_id'])->update(['balance'=>($totalBillableAmount)]);
-            DB::table('tenantaccounts')->where('amount','<=',0)->delete();
-
-
-            $finalReports = Finalreport::create([
-                'lease_id'=>$lease->id,
-                'user_id'=>$lease->user->id,
-                'property_id'=>$lease->propertyunit->property->id,
-                'amount'=>$bill->amount,
-                'transaction_type'=>'credit'
-            ]);
         });
 
 
