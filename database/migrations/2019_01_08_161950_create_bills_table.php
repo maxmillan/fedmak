@@ -17,8 +17,9 @@ class CreateBillsTable extends Migration
             $table->increments('id');
             $table->integer('amount');
 
-            $table->integer('propertyunit_id')->unsigned();
-            $table->foreign('propertyunit_id')->references('id')->on('propertyunits');
+
+            $table->integer('lease_id')->unsigned();
+            $table->foreign('lease_id')->references('id')->on('leases');
 
             $table->integer('servicebill_id')->unsigned();
             $table->foreign('servicebill_id')->references('id')->on('servicebills');

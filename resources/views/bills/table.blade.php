@@ -10,9 +10,8 @@
     </thead>
     <tbody>
     @foreach($bills as $bill)
-    @foreach($tenantDetails as $tenantDetail)
         <tr>
-            <td>{!! $tenantDetail->user->name !!} {!! $tenantDetail->user->last !!}</td>
+            <td>{!! $bill->lease->user->name !!} {!! $bill->lease->user->last !!}</td>
             <td>{!! $bill->servicebill->name !!}</td>
             <td>{!! $bill->amount !!}</td>
             <td>
@@ -25,7 +24,6 @@
                 {!! Form::close() !!}
             </td>
         </tr>
-    @endforeach
     @endforeach
     </tbody>
 </table>

@@ -87,6 +87,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('leaseHelp', 'leaseHelpController@index');
     Route::get('complain', 'complaintController@notification');
     Route::get('serviceBillDetails/{id}','BillController@serviceBillDetails');
+    Route::get('beal','BillController@billing');
 
 
         Route::any('getPaidFilter/{id}','PaidtenantController@getPaidTenants');

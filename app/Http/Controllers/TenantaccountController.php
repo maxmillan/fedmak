@@ -51,6 +51,7 @@ class TenantaccountController extends AppBaseController
 
     public function unpaidTenants($id){
         $tenantaccounts = Tenantaccount::where('property_id',$id)->get();
+        $tenantaccounts=$tenantaccounts->unique('user_id');
         return view('tenantaccounts.index',[
             'property_id'=>$id,
             'tenantaccounts'=>$tenantaccounts

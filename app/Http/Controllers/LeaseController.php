@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Finalreport;
 use App\Http\Requests\CreateLeaseRequest;
 use App\Http\Requests\UpdateLeaseRequest;
 use App\Models\Bill;
@@ -89,16 +90,23 @@ class LeaseController extends AppBaseController
         DB::table('propertyunits')->where('house',$findHouseNos->house)->update(['status'=>booked]);
         $findLeases = Lease::where('propertyunit_id',$input['propertyunit_id'])->get();
             foreach ($findLeases as $findLease)
-        $propertyUnitBills = Propertyunitservicebill::where('propertyunit_id',$input['propertyunit_id'])->get();
+        $propertyUnitBills = Propertyunitservicebill::where('propertyunit_id',$findLease->propertyunit_id)->get();
             foreach ($propertyUnitBills as $propertyUnitBill)
-                $propertyUnits = Propertyunitservicebill::where('propertyunit_id',$input['propertyunit_id'])->sum('amount');
+                $propertyUnits = Propertyunitservicebill::where('propertyunit_id',$findLease->propertyunit_id)->sum('amount');
                 //insert bill to bills table
                 $monthlyBill = Bill::create([
                     'amount' =>$propertyUnits,
-                    'propertyunit_id' =>$findLease->propertyunit->id,
+                    'lease_id' =>$findLease->id,
                     'servicebill_id' =>$propertyUnitBill->servicebill_id
                 ]);
-                $bills = Bill::where('propertyunit_id',$findLease->propertyunit->id)->get();
+                $finalReports = Finalreport::create([
+                    'lease_id'=>$findLease->id,
+                    'user_id'=>$findLease->user->id,
+                    'property_id'=>$findLease->propertyunit->property_id,
+                    'amount'=>$propertyUnits,
+                    'transaction_type'=>'credit'
+                ]);
+                $bills = Bill::where('lease_id',$findLease->id)->get();
                 foreach ($bills as $bill){
                     $tenantAccount = Tenantaccount::create([
                         'user_id' => $findLease->user_id,

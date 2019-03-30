@@ -47,10 +47,8 @@ class MpesaPaymentController extends Controller
 //            $units = Propertyunit::all();
 
 
-        $findUnits = Propertyunit::where('house','=',$payment->BillRefNumber)->get();
-            foreach ($findUnits as $findUnit)
-            $findLeases = Lease::where('propertyunit_id','=',$findUnit->id)->get();
-            foreach ($findLeases as $findLease)
+        $findUnit = Propertyunit::where('house','=',$payment->BillRefNumber)->first();
+                $findLease = Lease::where('propertyunit_id','=',$findUnit->id)->first();
 
                 $tenants = Paidtenant::create([
                     'user_id'=>$findLease->user->id,
@@ -63,33 +61,38 @@ class MpesaPaymentController extends Controller
 //                'bill'=>$bill->servicebill->name
                 ]);
 
-        $finalReports = Finalreport::create([
-            'lease_id'=>$findLease->id,
-            'user_id'=>$findLease->user->id,
-            'property_id'=>$findLease->propertyunit->property->id,
-            'amount'=>$payment->TransAmount,
-            'transaction_type'=>'debit'
-        ]);
+                $finalReports = Finalreport::create([
+                    'lease_id'=>$findLease->id,
+                    'user_id'=>$findLease->user->id,
+                    'property_id'=>$findLease->propertyunit->property_id,
+                    'amount'=>$payment->TransAmount,
+                    'transaction_type'=>'debit'
+                ]);
 
-        $total = 0;
-           $balances = Tenantaccount::where('lease_id','=',$findLease->id)->get();
-           $balans = Paidtenant::where('lease_id','=',$findLease->id)->get();
-           foreach ($balances as $balance)
+                $balance = Tenantaccount::where('lease_id','=',$findLease->id)->first();
+                $balans = Paidtenant::where('lease_id','=',$findLease->id)->first();
+                if ($balance){
+                    $amount = ($payment->TransAmount);
+                    $amount1 = ($balance->amount);
+                    $totalBalance = ($amount1-$amount);
+                }
+                else{
+                    $amount = ($payment->TransAmount);
+                    $amount1 = ($balans->balance);
+                    $totalBalance = ($amount1-$amount);
 
-            $total = ($balance->amount);
 
-           foreach ($balans as $balan)
-               $totalTwo = ($balan->amount);
 
-        /** @noinspection PhpUndefinedVariableInspection */
-        $totalBalance = ($total - $totalTwo);
+                }
+
         DB::table('paidtenants')->where('lease_id',"=", $tenants->lease_id)->update(['balance'=>($totalBalance)]);
 
+        DB::table('tenantaccounts')->where('lease_id','=', $tenants->lease_id)->update(['amount'=>($totalBalance)]);
+
 //            endforeach
-        DB::table('tenantaccounts')->where('lease_id','=',$tenants->lease_id)->Where('amount','<=',$tenants->amount)->delete();
+        DB::table('tenantaccounts')->where('lease_id','=',$tenants->lease_id)->Where('amount','<=',0)->delete();
 
 
-        DB::table('tenantaccounts')->where('lease_id','=', $tenants->lease_id)->Where('amount','>',$tenants->amount)->update(['amount'=>($totalBalance)]);
 
     }
 
@@ -108,8 +111,8 @@ class MpesaPaymentController extends Controller
 
         $curl_post_data = array(
             //Fill in the request parameters with valid values
-            'ValidationURL' => 'https://55f83190.ngrok.io/rental/public/getMpesaValidation',
-            'ConfirmationURL' => 'https://55f83190.ngrok.io/rental/public/getMpesaPayment',
+            'ValidationURL' => 'https://2a983c22.ngrok.io/rental/public/getMpesaValidation',
+            'ConfirmationURL' => 'https://2a983c22.ngrok.io/rental/public/getMpesaPayment',
             'ResponseType' => 'completed',
             'ShortCode' => '601426',
         );
@@ -131,7 +134,7 @@ class MpesaPaymentController extends Controller
 
     public function simulate(){
         $mpesa= new Mpesa();
-        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 12000, 254708374149, 'A1' );
+        $c2bTransaction= $mpesa->c2b(601426, 'CustomerPayBillOnline', 2000, 254708374149, 'A1' );
         var_dump($c2bTransaction);
     }
 }

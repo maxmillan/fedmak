@@ -38,11 +38,8 @@ class BillController extends AppBaseController
     {
         $this->billRepository->pushCriteria(new RequestCriteria($request));
         $bills = $this->billRepository->all();
-        foreach ($bills as $bill)
-            $tenantDetails = Lease::where('propertyunit_id',$bill->propertyunit_id)->get();
-        return view('bills.index',[
-            'tenantDetails'=>$tenantDetails
-        ])
+
+        return view('bills.index')
             ->with('bills', $bills);
     }
 
@@ -57,7 +54,7 @@ class BillController extends AppBaseController
         $bills = $this->billRepository->all();
 
 //        $leases = Lease::with('propertyunit')->get();
-        $leases = Propertyunitservicebill::with('propertyunit')->get();
+        $leases = Lease::all();
         $services = \App\Models\Servicebill::all();
 
 //        print_r($leases);die;
@@ -69,8 +66,11 @@ class BillController extends AppBaseController
         ]);
     }
     public function serviceBillDetails($id){
-        $serviceBill = Propertyunitservicebill::where('id',$id)->with(['propertyunit','servicebill'])->first();
-        return response()->json($serviceBill);
+        $serviceBills = Propertyunitservicebill::where('id',$id)->with(['propertyunit','servicebill'])->get();
+        if (count($serviceBills)){
+            return response()->json($serviceBills);
+
+        }
     }
 
     /**
@@ -101,20 +101,25 @@ class BillController extends AppBaseController
                 //insert bill to bills table
                 $bill = $this->billRepository->create($input);
 //            if (!($lease==null)){
-            $leases = Lease::where('propertyunit_id',$input['propertyunit_id'])->get();
-            foreach ($leases as $lease){
-                $totalBillableAmount = $bill->amount;
-                $paidAmounts = Paidtenant::where('lease_id',$lease->id)->get();
-                if(count($paidAmounts)){
-                    foreach ($paidAmounts as $paidAmount){
-                        $balance = ($bill->amount);
+                    $balance=0;
+                $paidAmount = Paidtenant::where('lease_id',$bill->lease_id)->first();
+                    if ($paidAmount){
+                        $balance =($input['amount']);
                         $balance1 = ($paidAmount->balance);
+                        $balance2 =($balance1+$balance);
 
-                        $totalBillableAmount = ($balance1+$balance);
+                        $totalBillableAmount = ($balance2);
+                    }
+                    else{
+                    $tenant = Tenantaccount::where('lease_id',$bill->lease_id)->sum('amount');
+
+                        $balance =($input['amount']);
+                        $balance2 =($tenant+$balance);
+
+                        $totalBillableAmount = ($balance2);
                     }
 
-                }
-                $tenants = Tenantaccount::where('lease_id',$lease->id)->get();
+                $tenants = Tenantaccount::where('lease_id',$bill->lease_id)->get();
                 if (count($tenants)){
 //                    foreach ($tenants as $tenant){
 //                        $total =($tenant->amount);
@@ -122,36 +127,35 @@ class BillController extends AppBaseController
 //
 //                    }
 
-                    DB::table('tenantaccounts')->where('lease_id',$lease->id)->update(['amount'=>($totalBillableAmount)]);
+                    DB::table('tenantaccounts')->where('lease_id',$bill->lease_id)->update(['amount'=>($totalBillableAmount)]);
 
 
                 }
                 else{
                     //insert bill to tenants account table
                     $tenantAccount = Tenantaccount::create([
-                        'user_id' => $lease->user_id,
-                        'lease_id' => $lease->id,
+                        'user_id' => $bill->lease->user_id,
+                        'lease_id' => $bill->lease_id,
                         'bill_id' => $bill->id,
-                        'property_id' => $lease->propertyunit->property->id,
+                        'property_id' => $bill->lease->propertyunit->property->id,
                         'transaction_type' => credit,
                         'amount' => $totalBillableAmount,
-                        'house' => $lease->propertyunit->house,
+                        'house' => $bill->lease->propertyunit->house,
 
                     ]);
                 }
 
-                DB::table('paidtenants')->where('lease_id',$lease->id)->update(['balance'=>($totalBillableAmount)]);
-                DB::table('tenantaccounts')->where('amount','<=',0)->delete();
+                DB::table('paidtenants')->where('lease_id',$bill->lease_id)->update(['balance'=>($totalBillableAmount)]);
+                DB::table('tenantaccounts')->where('lease_id',$bill->lease_id)->where('amount','<=',0)->delete();
 
 
                 $finalReports = Finalreport::create([
-                    'lease_id'=>$lease->id,
-                    'user_id'=>$lease->user->id,
-                    'property_id'=>$lease->propertyunit->property->id,
+                    'lease_id'=>$bill->lease_id,
+                    'user_id'=>$bill->lease->user_id,
+                    'property_id'=>$bill->lease->propertyunit->property_id,
                     'amount'=>$bill->amount,
                     'transaction_type'=>'credit'
                 ]);
-            }
 
         });
 

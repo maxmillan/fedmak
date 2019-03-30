@@ -32,6 +32,7 @@ class Bill extends Model
 
     public $fillable = [
         'propertyunit_id',
+        'lease_id',
         'servicebill_id',
         'amount'
     ];
@@ -44,6 +45,7 @@ class Bill extends Model
     protected $casts = [
         'id' => 'integer',
         'propertyunit_id' => 'integer',
+        'lease_id' => 'integer',
         'servicebill_id' => 'integer',
         'amount' => 'integer'
     ];

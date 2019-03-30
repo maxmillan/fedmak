@@ -1,20 +1,25 @@
-<!-- Lease Id Field -->
+    <!-- Lease Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('lease_id', 'House No:') !!}
-    <select class="form-control" id="lease_id">
+    <select class="form-control" name="lease_id" id="lease_id">
         <option>Select House No:</option>
         @foreach($leases as $lease )
             <option value='{{$lease->id}}'>{{$lease->propertyunit->house}}</option>
         @endforeach
     </select>
-    <input type="hidden" id="propertyunit" name="propertyunit_id">
+{{--    <input type="hidden" id="propertyunit" name="propertyunit_id">--}}
 </div>
 
 <!-- Servicebill Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('servicebill_id', 'Service Bill:') !!}
-    <input class="form-control"  id="servicebill">
-    <input type="hidden" id="service" name="servicebill_id">
+    <select class="form-control" name="servicebill_id" id="servicebill">
+        <option>Select Bill</option>
+        @foreach($services as $service)
+           <option value='{{$service->id}}'>{{$service->name}}</option>
+            @endforeach
+    </select>
+{{--    <input type="hidden" id="service" name="servicebill_id">--}}
         {{--@foreach($services as $service )--}}
             {{--<option value='{{$service->id}}'>{{$service->name}}</option>--}}
         {{--@endforeach--}}

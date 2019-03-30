@@ -19,12 +19,12 @@ class finalReportController extends Controller
 
     public function EachTenantReport($id)
     {
-        $finalReports = Finalreport::where('user_id', $id)->get();
+        $finalReports = Finalreport::where('user_id', $id)->orderByDesc('id')->get();
         $totals = Finalreport::where('user_id', $id)->where('transaction_type','debit')->sum('amount');
 
 
         return view('backend.finalReport', [
-            'user_id' => $id,
+            'property_id' => $id,
             'finalReports' => $finalReports,
             'totals' => $totals,
         ]);
@@ -32,7 +32,7 @@ class finalReportController extends Controller
 
         public function eachPropertyReport($id){
 
-        $finalReports = Finalreport::where('property_id',$id)->get();
+        $finalReports = Finalreport::where('property_id',$id)->orderByDesc('id')->get();
         $totals = Finalreport::where('property_id',$id)->where('transaction_type','debit')->sum('amount');
 //        $finals = Finalreport::where('property_id',$id)->where('transaction_type', 'debit')->get();
         return view('backend.finalReport',[

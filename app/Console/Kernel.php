@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
 //         $schedule->command('command:DeletePayments')
 //                  ->everyMinute();
 
-         $schedule->job(new CreateMonthlyBills())->monthly();
+             $schedule->job(new CreateMonthlyBills())->monthly();
     }
 
     /**
