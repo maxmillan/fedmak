@@ -16,13 +16,17 @@
             <td>{!! $lease->propertyunit->property->name !!}</td>
             <td>{!! $lease->propertyunit->house !!}</td>
             <td>{!! $lease->propertyunit->housetype !!}</td>
-            <td>{!! $lease->status !!}</td>
-            <td>
+            @if($lease->status=='TERMINATED')
+            <td><button class="btn-danger">{!! $lease->status !!}</button></td>
+            @else
+                <td><button class="btn-default">{!! $lease->status !!}</button></td>
+            @endif
+                <td>
                 {!! Form::open(['route' => ['leases.destroy', $lease->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('leases.show', [$lease->id]) !!}" class='btn btn-success btn-xs'><i class=""></i>TENANT FULL DETAILS</a>
                     <a href="{!! route('leases.edit', [$lease->id]) !!}" class='btn btn-default btn-xs'><i class="">EDIT</i></a>
-                    {!! Form::button('<i class="">DELETE    </i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    {!! Form::button('<i class="">REMOVE    </i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>
                 {!! Form::close() !!}
             </td>

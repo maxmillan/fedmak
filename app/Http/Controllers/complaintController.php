@@ -27,8 +27,9 @@ class complaintController extends Controller
         $complaints->user_id = Auth::id();
 
         $complaints->save();
+        $getUser = User::where('id',Auth::id())->first();
 
-        SendSms::dispatch($request->message ,'0790268795');
+        SendSms::dispatch($request->message ." ". $getUser->name." ".$getUser->last,'0790268795');
 
 //        $complaint = Complaint::get($request->complaint_id);
 //        $user = User::all();

@@ -218,9 +218,10 @@ class LeaseController extends AppBaseController
         }
         $findLeases = Lease::find($id);
         DB::table('propertyunits')->where('house',$findLeases->propertyunit->house)->update(['status'=>null]);
+        DB::table('leases')->where('propertyunit_id',$findLeases->propertyunit_id)->update(['status'=>'TERMINATED'] );
         $this->leaseRepository->delete($id);
 
-        Flash::success('Lease deleted successfully.');
+        Flash::success('Lease Terminated successfully.');
 
         return redirect(route('leases.index'));
     }

@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b3e5d44-5762-4639-af25-86d6f669be8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TenantaccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TenantaccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/CreateMonthlyBills.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/CreateMonthlyBills.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_08_161950_create_bills_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_01_08_161950_create_bills_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bills/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bills/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bills/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bills/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tenantaccounts/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/complaint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/complaint.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/payrent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/payrent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/leases/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/leases/table.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,95 +52,33 @@
     <favorites_list name="rental" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/bills">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/finalreports">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/tenantaccounts">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/paidtenants">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="30" column="62" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="62" />
-              <folding>
-                <element signature="e#31#63#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/users/table.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/finalReportController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeaseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+            <state relative-caret-position="383">
+              <caret line="223" column="40" selection-start-line="223" selection-start-column="40" selection-end-line="223" selection-end-column="40" />
               <folding>
                 <element signature="e#40#60#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/leases/table.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/leases">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -182,18 +113,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/testing.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Servicebill.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_23_064047_add_lease_id_to_propertyunitservicebills.php" />
-        <option value="$PROJECT_DIR$/app/Jobs/BillingTenantsMonthly.php" />
-        <option value="$PROJECT_DIR$/resources/views/leases/table.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_01_06_121505_create_propertyunits_table.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/billTenantTestingController.php" />
         <option value="$PROJECT_DIR$/resources/views/backendPartial/_nav.blade.php" />
@@ -204,7 +126,6 @@
         <option value="$PROJECT_DIR$/resources/views/propertyunits/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/propertyunits/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/paymentsAndBilling.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/paymentrecords.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/DeletePayments.php" />
@@ -238,6 +159,13 @@
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/finalReportController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/complaintController.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/payrent.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/complaint.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/leases/table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LeaseController.php" />
       </list>
     </option>
@@ -445,48 +373,7 @@
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
               <item name="rental" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="backendPartial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="bills" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
@@ -494,34 +381,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="leases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="paidtenants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyunitservicebills" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tenantaccounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rental" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rental" type="b2602c69:ProjectViewProjectNode" />
@@ -697,12 +556,14 @@
       <workItem from="1553767417208" duration="15342000" />
       <workItem from="1553792051289" duration="6462000" />
       <workItem from="1553841527438" duration="14905000" />
-      <workItem from="1553923425747" duration="17895000" />
+      <workItem from="1553923425747" duration="23619000" />
+      <workItem from="1555494105019" duration="44000" />
+      <workItem from="1555494181006" duration="1373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="842510000" />
+    <option name="totallyTimeSpent" value="849651000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -717,10 +578,9 @@
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.27272728" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49675325" visible="true" weight="0.28181818" />
       <window_info id="Structure" order="1" sideWeight="0.5032467" side_tool="true" weight="0.4212121" />
       <window_info id="Favorites" order="2" sideWeight="0.5016234" side_tool="true" weight="0.40075758" />
-      <window_info anchor="bottom" id="Command Line Tools Console" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
@@ -731,10 +591,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" weight="0.32954547" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49772727" weight="0.6319218" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5022727" side_tool="true" weight="0.73615634" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32899022" />
-      <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.73615634" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.32899022" />
+      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.32954547" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="13" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="14" sideWeight="0.49772727" weight="0.6319218" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -779,69 +640,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf32_unicode_520_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf32_swedish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf16_vietnamese_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf32_turkish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/koi8r_bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf32_spanish2_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf32_spanish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/ucs2_croatian_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf16le_general_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/tis620_bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/ucs2_sinhala_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf16_turkish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf8_croatian_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf16_swedish_ci">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf8_bin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/collation/utf8_estonian_ci">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/messages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/leases">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -978,13 +780,6 @@
     <entry file="file://$PROJECT_DIR$/resources/views/paidtenants/table.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="88" column="34" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-30.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-143142" />
@@ -1048,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MpesaPaymentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -1062,10 +850,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeaseController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/Adminlogin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="88" column="34" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AdminloginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#45#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="145" column="20" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/payrent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/complaints">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Jobs/SendSms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/complaint.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1585">
+          <caret line="305" selection-start-line="305" selection-end-line="305" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/complaintController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="306" selection-start-line="306" selection-end-line="312" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/messages.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://89d35476-23ce-47bf-8bb9-6d6ab9e8e3e5/schema/rental/table/leases">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/leases/table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LeaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="223" column="40" selection-start-line="223" selection-start-column="40" selection-end-line="223" selection-end-column="40" />
           <folding>
             <element signature="e#40#60#0#PHP" expanded="true" />
           </folding>
