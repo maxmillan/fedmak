@@ -18,7 +18,7 @@ class CreateLeasesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->integer('propertyunit_id')->unsigned()->unique();
+            $table->integer('propertyunit_id')->unsigned()->nullable();
             $table->foreign('propertyunit_id')->references('id')->on('propertyunits');
             $table->string('status');
 

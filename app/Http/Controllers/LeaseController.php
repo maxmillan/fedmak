@@ -38,7 +38,8 @@ class LeaseController extends AppBaseController
     public function index(Request $request)
     {
         $this->leaseRepository->pushCriteria(new RequestCriteria($request));
-        $leases = $this->leaseRepository->all();
+//        $leases = $this->leaseRepository->all();
+        $leases = Lease::orderByDesc('id')->get();
 
         return view('leases.index')
             ->with('leases', $leases);
@@ -75,7 +76,7 @@ class LeaseController extends AppBaseController
     {
         $validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
             'status' => ['required'],
-            'propertyunit_id'=>['unique:leases']
+//            'propertyunit_id'=>['unique:leases']
 
         ]);
         if ($validator->fails()) {
@@ -195,7 +196,7 @@ class LeaseController extends AppBaseController
 
         $lease = $this->leaseRepository->update($request->all(), $id);
 
-        Flash::success('Lease updated successfully.');
+        Flash::success('Tenant Details updated successfully.');
 
         return redirect(route('leases.index'));
     }
@@ -219,9 +220,9 @@ class LeaseController extends AppBaseController
         $findLeases = Lease::find($id);
         DB::table('propertyunits')->where('house',$findLeases->propertyunit->house)->update(['status'=>null]);
         DB::table('leases')->where('propertyunit_id',$findLeases->propertyunit_id)->update(['status'=>'TERMINATED'] );
-        $this->leaseRepository->delete($id);
+//        $this->leaseRepository->delete($id);
 
-        Flash::success('Lease Terminated successfully.');
+        Flash::success('Tenant Details Terminated successfully.');
 
         return redirect(route('leases.index'));
     }

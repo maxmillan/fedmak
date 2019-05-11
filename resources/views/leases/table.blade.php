@@ -26,7 +26,7 @@
                 <div class='btn-group'>
                     <a href="{!! route('leases.show', [$lease->id]) !!}" class='btn btn-success btn-xs'><i class=""></i>TENANT FULL DETAILS</a>
                     <a href="{!! route('leases.edit', [$lease->id]) !!}" class='btn btn-default btn-xs'><i class="">EDIT</i></a>
-                    {!! Form::button('<i class="">REMOVE    </i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    {!! Form::button('<i class="">TERMINATE    </i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>
                 {!! Form::close() !!}
             </td>
