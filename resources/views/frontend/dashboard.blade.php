@@ -11,7 +11,7 @@
                 @if($balances > 0)
             <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="">BALANCE = {{$balances}}</a>
                 @else
-                <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="">PAID</a>
+                <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="">PAID <br>Balance = {{$balances}}</a>
 
                 @endif
             {{--@endforeach--}}
