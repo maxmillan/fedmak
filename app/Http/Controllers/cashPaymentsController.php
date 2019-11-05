@@ -80,7 +80,7 @@ class cashPaymentsController extends Controller
             $totalTwo = $findPaid->amount;
 
         $totalBalance = $total - $totalTwo;
-        DB::table('paidtenants')->where('lease_id',"=", $payments->lease_id)->update(['balance'=>($totalBalance)]);
+        DB::table('paidtenants')->where('lease_id',"=", $payments->lease_id)->latest()->update(['balance'=>($totalBalance)]);
 
 
         DB::table('tenantaccounts')->where('lease_id','=',$payments->lease_id)->Where('amount','<=',$payments->amount)->delete();
